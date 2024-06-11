@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "399674068229",
+    "project_id": "flugram-55f95",
+    "storage_bucket": "flugram-55f95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399674068229:android:b46cfe8ca86845584fbb6c",
+        "android_client_info": {
+          "package_name": "com.example.flugram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399674068229-l7pnq17rdrv4g9e4v5nqm02dsmg3pae6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flugram",
+            "certificate_hash": "6b52d402f5125198c3b957ad66a3aa93318b4b57"
+          }
+        },
+        {
+          "client_id": "399674068229-21ljhftnvoaq0uccav31f367q9m8inds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd--HPAU4gN1SEP-PYu0n4fG91mD-BExg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399674068229-21ljhftnvoaq0uccav31f367q9m8inds.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "399674068229-o9m890o3v4csehnv3s4lfi7ca68bei5m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flugram"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

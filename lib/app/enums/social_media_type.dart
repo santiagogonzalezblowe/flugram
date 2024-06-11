@@ -1,0 +1,4 @@
+enum SocialMediaType {
+  google,
+  apple,
+}
