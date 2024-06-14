@@ -8,6 +8,7 @@ abstract class BloweBloc<T, P> extends Bloc<BloweEvent, BloweBlocState> {
     on<BloweFetch>(_onFetch);
     on<BloweUpdateData>(_onUpdateData);
     on<BloweReset>(onReset);
+    on<BloweFetchMore>(_onFetchMore);
   }
 
   Future<void> onFetch(
@@ -24,6 +25,23 @@ abstract class BloweBloc<T, P> extends Bloc<BloweEvent, BloweBlocState> {
     }
 
     return onFetch(event, emit);
+  }
+
+  Future<void> onFetchMore(
+    BloweFetchMore event,
+    Emitter<BloweBlocState> emit,
+  ) =>
+      throw UnimplementedError();
+
+  Future<void> _onFetchMore(
+    BloweFetchMore event,
+    Emitter<BloweBlocState> emit,
+  ) {
+    if (event.params == null && P != BloweNoParams) {
+      throw Exception('Params cannot be null');
+    }
+
+    return onFetchMore(event, emit);
   }
 
   void _onUpdateData(

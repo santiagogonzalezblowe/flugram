@@ -1,7 +1,7 @@
 import 'package:flugram/app/logic/authentication/listener/authentication_listener.dart';
 import 'package:flugram/features/home/logic/home_blocs_provider.dart';
 import 'package:flugram/features/home/ui/widgets/create_app_floating_action_button.dart';
-import 'package:flugram/features/home/ui/widgets/flugrams_list_view.dart';
+import 'package:flugram/features/home/ui/widgets/flugrams_list_view_builder.dart';
 import 'package:flugram/features/home/ui/widgets/home_app_bar.dart';
 import 'package:flugram/features/home/ui/widgets/home_drawer.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
         child: Scaffold(
           appBar: HomeAppBar(),
           drawer: const HomeDrawer(),
-          body: const FlugramsListView(),
+          body: const FlugramsListViewBuilder(),
           floatingActionButton: const CreateAppFloatingActionButton(),
         ),
       ),

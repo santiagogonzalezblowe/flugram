@@ -1,6 +1,6 @@
-import 'package:flugram/app/widgets/text_form_field/page_description_text_form_field.dart';
-import 'package:flugram/app/widgets/text_form_field/page_name_text_form_field.dart';
-import 'package:flugram/app/widgets/text_form_field/page_path_text_form_field.dart';
+import 'package:flugram/app/widgets/text_form_field/page/page_description_text_form_field.dart';
+import 'package:flugram/app/widgets/text_form_field/page/page_name_text_form_field.dart';
+import 'package:flugram/app/widgets/text_form_field/page/page_path_text_form_field.dart';
 import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/delete_page/ui/page/delete_page_page.dart';
 import 'package:flugram/features/home/models/page_model.dart';
@@ -45,7 +45,7 @@ class _UpdatePageFormState extends State<UpdatePageForm> {
       child: Column(
         children: [
           BloweBlocSelector<UpdatePageBloc>(
-            builder: (bloc, enabled) => PageNameTextFormField(
+            builder: (context, enabled) => PageNameTextFormField(
               controller: _nameController,
               enabled: enabled,
               textInputAction: TextInputAction.next,
@@ -53,7 +53,7 @@ class _UpdatePageFormState extends State<UpdatePageForm> {
           ),
           const SizedBox(height: 16),
           BloweBlocSelector<UpdatePageBloc>(
-            builder: (bloc, enabled) => PageDescriptionTextFormField(
+            builder: (context, enabled) => PageDescriptionTextFormField(
               controller: _descriptionController,
               enabled: enabled,
               textInputAction: TextInputAction.next,
@@ -61,7 +61,7 @@ class _UpdatePageFormState extends State<UpdatePageForm> {
           ),
           const SizedBox(height: 16),
           BloweBlocSelector<UpdatePageBloc>(
-            builder: (bloc, enabled) => PagePathTextFormField(
+            builder: (context, enabled) => PagePathTextFormField(
               controller: _pathController,
               enabled: enabled,
               textInputAction: TextInputAction.done,

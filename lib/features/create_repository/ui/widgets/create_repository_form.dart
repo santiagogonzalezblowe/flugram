@@ -1,5 +1,5 @@
-import 'package:flugram/app/widgets/text_form_field/repository_description_text_form_field.dart';
-import 'package:flugram/app/widgets/text_form_field/repository_name_text_form_field.dart';
+import 'package:flugram/app/widgets/text_form_field/repository/repository_description_text_form_field.dart';
+import 'package:flugram/app/widgets/text_form_field/repository/repository_name_text_form_field.dart';
 import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/create_repository/logic/create_repository_bloc.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +33,7 @@ class _CreateRepositoryFormState extends State<CreateRepositoryForm> {
       child: Column(
         children: [
           BloweBlocSelector<CreateRepositoryBloc>(
-            builder: (bloc, enabled) => RepositoryNameTextFormField(
+            builder: (context, enabled) => RepositoryNameTextFormField(
               controller: _repositoryNameController,
               enabled: enabled,
               textInputAction: TextInputAction.next,

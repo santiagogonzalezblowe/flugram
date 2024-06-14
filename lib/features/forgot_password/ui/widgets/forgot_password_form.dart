@@ -30,7 +30,7 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
       child: Column(
         children: [
           BloweBlocSelector<ForgotPasswordBloc>(
-            builder: (bloc, enabled) => EmailTextFormField(
+            builder: (context, enabled) => EmailTextFormField(
               controller: _emailController,
               enabled: enabled,
               textInputAction: TextInputAction.done,

@@ -1,13 +1,20 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flugram/app/repositories/authenticated/bloc_repository.dart';
+import 'package:flugram/app/repositories/authenticated/blocs_repository.dart';
 import 'package:flugram/app/repositories/authenticated/flugram_repository.dart';
 import 'package:flugram/app/repositories/authenticated/flugrams_repository.dart';
 import 'package:flugram/app/repositories/authenticated/page_repository.dart';
 import 'package:flugram/app/repositories/authenticated/pages_repository.dart';
 import 'package:flugram/app/repositories/authenticated/repositories_repository.dart';
 import 'package:flugram/app/repositories/authenticated/repository_repository.dart';
+import 'package:flugram/app/repositories/authenticated/subpage_repository.dart';
 import 'package:flugram/app/repositories/authenticated/subpages_repository.dart';
 import 'package:flugram/app/repositories/authentication_repository.dart';
+import 'package:flugram/app/repositories/jelly_bean/jelly_bean_repository.dart';
+import 'package:flugram/app/repositories/spaceflight/spaceflight_repository.dart';
+import 'package:flugram/app/services/jelly_bean/spaceflight_service.dart';
+import 'package:flugram/app/services/spaceflight/spaceflight_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -71,6 +78,34 @@ class AppRepositoriesProvider extends StatelessWidget {
           create: (context) => SubpagesRepository(
             FirebaseFirestore.instance,
             _authenticationRepository,
+          ),
+        ),
+        RepositoryProvider(
+          create: (context) => SubpageRepository(
+            FirebaseFirestore.instance,
+            _authenticationRepository,
+          ),
+        ),
+        RepositoryProvider(
+          create: (context) => BlocsRepository(
+            FirebaseFirestore.instance,
+            _authenticationRepository,
+          ),
+        ),
+        RepositoryProvider(
+          create: (context) => BlocRepository(
+            FirebaseFirestore.instance,
+            _authenticationRepository,
+          ),
+        ),
+        RepositoryProvider(
+          create: (context) => SpaceflightRepository(
+            context.read<SpaceflightService>(),
+          ),
+        ),
+        RepositoryProvider(
+          create: (context) => JellyBeanRepository(
+            context.read<JellyBeanService>(),
           ),
         ),
       ],

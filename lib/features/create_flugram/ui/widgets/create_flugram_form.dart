@@ -33,7 +33,7 @@ class _CreateFlugramFormState extends State<CreateFlugramForm> {
       child: Column(
         children: [
           BloweBlocSelector<CreateFlugramBloc>(
-            builder: (bloc, enabled) => FlugramNameTextFormField(
+            builder: (context, enabled) => FlugramNameTextFormField(
               controller: _appNameController,
               enabled: enabled,
               textInputAction: TextInputAction.next,

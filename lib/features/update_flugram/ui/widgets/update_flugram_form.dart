@@ -41,7 +41,7 @@ class _UpdateFlugramFormState extends State<UpdateFlugramForm> {
         children: [
           const SizedBox(height: 16),
           BloweBlocSelector<UpdateFlugramBloc>(
-            builder: (bloc, enabled) => FlugramNameTextFormField(
+            builder: (context, enabled) => FlugramNameTextFormField(
               controller: _nameController,
               enabled: enabled,
               textInputAction: TextInputAction.next,
@@ -49,7 +49,7 @@ class _UpdateFlugramFormState extends State<UpdateFlugramForm> {
           ),
           const SizedBox(height: 16),
           BloweBlocSelector<UpdateFlugramBloc>(
-            builder: (bloc, enabled) => FlugramDescriptionTextFormField(
+            builder: (context, enabled) => FlugramDescriptionTextFormField(
               controller: _descriptionController,
               enabled: enabled,
               textInputAction: TextInputAction.done,

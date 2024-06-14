@@ -1,6 +1,6 @@
 import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/create_repository/ui/page/create_repository_page.dart';
-import 'package:flugram/features/flugram/logic/repositories_bloc.dart';
+import 'package:flugram/features/flugram/logic/repositories_watch_bloc.dart';
 import 'package:flugram/features/flugram/ui/widgets/repository_card.dart';
 import 'package:flugram/features/home/models/repository_model.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,7 @@ class RepositoriesListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<RepositoriesBloc, BloweBlocState>(
+    return BlocBuilder<RepositoriesWatchBloc, BloweBlocState>(
       builder: (context, state) {
         if (state is BloweInProgress) {
           return const Center(

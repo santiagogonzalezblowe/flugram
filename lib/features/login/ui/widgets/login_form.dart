@@ -33,7 +33,7 @@ class _LoginFormState extends State<LoginForm> {
       child: Column(
         children: [
           BloweBlocSelector<LoginBloc>(
-            builder: (bloc, enabled) => EmailTextFormField(
+            builder: (context, enabled) => EmailTextFormField(
               controller: _emailController,
               enabled: enabled,
               textInputAction: TextInputAction.next,
@@ -41,7 +41,7 @@ class _LoginFormState extends State<LoginForm> {
           ),
           const SizedBox(height: 16),
           BloweBlocSelector<LoginBloc>(
-            builder: (bloc, enabled) => PasswordTextFormField(
+            builder: (context, enabled) => PasswordTextFormField(
               controller: _passwordController,
               enabled: enabled,
               textInputAction: TextInputAction.done,

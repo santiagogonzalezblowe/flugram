@@ -1,6 +1,6 @@
-import 'package:flugram/app/widgets/text_form_field/page_description_text_form_field.dart';
-import 'package:flugram/app/widgets/text_form_field/page_name_text_form_field.dart';
-import 'package:flugram/app/widgets/text_form_field/page_path_text_form_field.dart';
+import 'package:flugram/app/widgets/text_form_field/page/page_description_text_form_field.dart';
+import 'package:flugram/app/widgets/text_form_field/page/page_name_text_form_field.dart';
+import 'package:flugram/app/widgets/text_form_field/page/page_path_text_form_field.dart';
 import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/create_subpage/logic/create_subpage_bloc.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +41,7 @@ class _CreateSubpageFormState extends State<CreateSubpageForm> {
       child: Column(
         children: [
           BloweBlocSelector<CreateSubpageBloc>(
-            builder: (bloc, enabled) => PageNameTextFormField(
+            builder: (context, enabled) => PageNameTextFormField(
               controller: _pageNameController,
               enabled: enabled,
               textInputAction: TextInputAction.next,

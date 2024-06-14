@@ -1,5 +1,5 @@
-import 'package:flugram/app/widgets/text_form_field/repository_description_text_form_field.dart';
-import 'package:flugram/app/widgets/text_form_field/repository_name_text_form_field.dart';
+import 'package:flugram/app/widgets/text_form_field/repository/repository_description_text_form_field.dart';
+import 'package:flugram/app/widgets/text_form_field/repository/repository_name_text_form_field.dart';
 import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/delete_repository/ui/page/delete_repository_page.dart';
 import 'package:flugram/features/home/models/repository_model.dart';
@@ -43,7 +43,7 @@ class _UpdateRepositoryFormState extends State<UpdateRepositoryForm> {
       child: Column(
         children: [
           BloweBlocSelector<UpdateRepositoryBloc>(
-            builder: (bloc, enabled) => RepositoryNameTextFormField(
+            builder: (context, enabled) => RepositoryNameTextFormField(
               controller: _nameController,
               enabled: enabled,
               textInputAction: TextInputAction.next,
@@ -51,7 +51,7 @@ class _UpdateRepositoryFormState extends State<UpdateRepositoryForm> {
           ),
           const SizedBox(height: 16),
           BloweBlocSelector<UpdateRepositoryBloc>(
-            builder: (bloc, enabled) => RepositoryDescriptionTextFormField(
+            builder: (context, enabled) => RepositoryDescriptionTextFormField(
               controller: _descriptionController,
               enabled: enabled,
               textInputAction: TextInputAction.done,

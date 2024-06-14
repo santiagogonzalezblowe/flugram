@@ -4,7 +4,7 @@ import 'package:flugram/app/repositories/authenticated/repositories_repository.d
 import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/flugram/logic/flugram_watch_bloc.dart';
 import 'package:flugram/features/flugram/logic/pages_bloc.dart';
-import 'package:flugram/features/flugram/logic/repositories_bloc.dart';
+import 'package:flugram/features/flugram/logic/repositories_watch_bloc.dart';
 import 'package:flutter/material.dart';
 
 class FlugramBlocsProvider extends StatelessWidget {
@@ -33,7 +33,7 @@ class FlugramBlocsProvider extends StatelessWidget {
           )..add(const BloweFetch(BloweNoParams())),
         ),
         BlocProvider(
-          create: (context) => RepositoriesBloc(
+          create: (context) => RepositoriesWatchBloc(
             context.read<RepositoriesRepository>(),
             flugramId,
           )..add(const BloweFetch(BloweNoParams())),

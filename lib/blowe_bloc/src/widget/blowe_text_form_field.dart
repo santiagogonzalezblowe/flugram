@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-typedef BloweFormFieldValidator<T> = String? Function(
+typedef BloweTextFormFieldValidator<T> = String? Function(
   BuildContext context,
-  T value,
+  T? value,
 );
 
-typedef BloweFormFieldSuffixIconBuilder = Widget Function(
+typedef BloweTextFormFieldSuffixIconBuilder = Widget Function(
   BuildContext context,
   bool obscureText,
   VoidCallback toggleObscureText,
 );
-typedef BloweFormFieldLabelTextBuilder = String Function(
+typedef BloweTextFormFieldLabelTextBuilder = String Function(
   BuildContext context,
 );
 
@@ -34,9 +34,9 @@ abstract class BloweTextFormField extends StatefulWidget {
   final VoidCallback? onEditingComplete;
   final TextInputType? keyboardType;
   final TextInputAction? textInputAction;
-  final BloweFormFieldValidator<String?>? validator;
-  final BloweFormFieldSuffixIconBuilder? suffixIcon;
-  final BloweFormFieldLabelTextBuilder labelText;
+  final BloweTextFormFieldValidator<String>? validator;
+  final BloweTextFormFieldSuffixIconBuilder? suffixIcon;
+  final BloweTextFormFieldLabelTextBuilder labelText;
 
   @override
   State<BloweTextFormField> createState() => _BloweTextFormFieldState();

@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:equatable/equatable.dart';
 import 'package:flugram/app/extension/firestore_data_extension.dart';
 
-class RepositoryModel {
-  RepositoryModel({
+class RepositoryModel extends Equatable {
+  const RepositoryModel({
     required this.id,
     required this.name,
     required this.description,
@@ -54,4 +55,7 @@ class RepositoryModel {
   final String description;
   final String createdBy;
   final Timestamp createdAt;
+
+  @override
+  List<Object> get props => [id];
 }

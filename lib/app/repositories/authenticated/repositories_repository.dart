@@ -23,6 +23,21 @@ class RepositoriesRepository extends AuthenticatedRepository {
                 snapshot.docs.map(RepositoryModel.fromFirestore).toList(),
           );
 
+  Future<List<RepositoryModel>> loadRepositories(String flugramId) async {
+    final snapshot = await _repositoriesCollection(flugramId).get();
+    return snapshot.docs.map(RepositoryModel.fromFirestore).toList();
+  }
+
+  Future<List<RepositoryModel>> loadRepositoriesByIds(
+    String flugramId,
+    List<String> ids,
+  ) async {
+    final snapshot = await _repositoriesCollection(flugramId)
+        .where(FieldPath.documentId, whereIn: ids)
+        .get();
+    return snapshot.docs.map(RepositoryModel.fromFirestore).toList();
+  }
+
   CollectionReference<Map<String, dynamic>> _repositoriesCollection(
     String flugramId,
   ) =>

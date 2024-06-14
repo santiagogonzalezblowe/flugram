@@ -16,6 +16,15 @@ class BloweFetch<P> extends BloweEvent {
   List<Object?> get props => [params];
 }
 
+class BloweFetchMore<P> extends BloweEvent {
+  const BloweFetchMore(this.params);
+
+  final P params;
+
+  @override
+  List<Object?> get props => [params];
+}
+
 class BloweUpdateData<T> extends BloweEvent {
   const BloweUpdateData(this.data);
 

@@ -33,7 +33,7 @@ class _SignUpFormState extends State<SignUpForm> {
       child: Column(
         children: [
           BloweBlocSelector<SignUpBloc>(
-            builder: (bloc, enabled) => EmailTextFormField(
+            builder: (context, enabled) => EmailTextFormField(
               controller: _emailController,
               enabled: enabled,
               textInputAction: TextInputAction.next,
@@ -41,7 +41,7 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           const SizedBox(height: 16),
           BloweBlocSelector<SignUpBloc>(
-            builder: (bloc, enabled) => PasswordTextFormField(
+            builder: (context, enabled) => PasswordTextFormField(
               controller: _passwordController,
               enabled: enabled,
               textInputAction: TextInputAction.done,

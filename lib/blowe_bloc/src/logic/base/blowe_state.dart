@@ -12,12 +12,13 @@ class BloweInitial extends BloweBlocState {}
 class BloweInProgress extends BloweBlocState {}
 
 class BloweCompleted<T> extends BloweBlocState {
-  const BloweCompleted(this.data);
+  const BloweCompleted(this.data, {this.isLoadingMore = false});
 
   final T data;
+  final bool isLoadingMore;
 
   @override
-  List<Object?> get props => [data];
+  List<Object?> get props => [data, isLoadingMore];
 }
 
 class BloweError extends BloweBlocState {

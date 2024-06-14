@@ -1,21 +1,26 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flugram/app/widgets/bottom_navigation_scaffold.dart';
+import 'package:flugram/features/create_bloc/ui/page/create_bloc_page.dart';
 import 'package:flugram/features/create_flugram/ui/page/create_flugram_page.dart';
 import 'package:flugram/features/create_page/ui/page/create_page_page.dart';
 import 'package:flugram/features/create_repository/ui/page/create_repository_page.dart';
 import 'package:flugram/features/create_subpage/ui/page/create_subpage_page.dart';
+import 'package:flugram/features/delete_bloc/ui/page/delete_bloc_page.dart';
 import 'package:flugram/features/delete_flugram/ui/page/delete_flugram_page.dart';
 import 'package:flugram/features/delete_page/ui/page/delete_page_page.dart';
 import 'package:flugram/features/delete_repository/ui/page/delete_repository_page.dart';
+import 'package:flugram/features/delete_subpage/ui/page/delete_subpage_page.dart';
 import 'package:flugram/features/flugram/ui/page/flugram_page.dart';
 import 'package:flugram/features/forgot_password/ui/page/forgot_password_page.dart';
 import 'package:flugram/features/home/ui/page/home_page.dart';
 import 'package:flugram/features/login/ui/page/login_page.dart';
 import 'package:flugram/features/news/ui/page/news_page.dart';
 import 'package:flugram/features/sign_up/ui/page/sign_up_page.dart';
+import 'package:flugram/features/update_bloc/ui/page/update_bloc_page.dart';
 import 'package:flugram/features/update_flugram/ui/page/update_flugram_page.dart';
 import 'package:flugram/features/update_page/ui/page/update_page_page.dart';
 import 'package:flugram/features/update_repository/ui/page/update_repository_page.dart';
+import 'package:flugram/features/update_subpage/ui/page/update_subpage_page.dart';
 import 'package:go_router/go_router.dart';
 
 GoRouter get goRouter {
@@ -106,6 +111,92 @@ GoRouter get goRouter {
                             parentPageIds: parentPageIds,
                           );
                         },
+                      ),
+                      GoRoute(
+                        path: CreateBlocPage.routePath,
+                        name: CreateBlocPage.routeName,
+                        builder: (context, state) {
+                          final flugramId = state.pathParameters['flugramId']!;
+                          final parentPageIds =
+                              state.pathParameters['parentPageIds']!.split(',');
+
+                          return CreateBlocPage(
+                            flugramId: flugramId,
+                            parentPageIds: parentPageIds,
+                          );
+                        },
+                      ),
+                      GoRoute(
+                        path: UpdateBlocPage.routePath,
+                        name: UpdateBlocPage.routeName,
+                        builder: (context, state) {
+                          final flugramId = state.pathParameters['flugramId']!;
+                          final parentPageIds =
+                              state.pathParameters['parentPageIds']!.split(',');
+                          final blocId = state.pathParameters['blocId']!;
+
+                          return UpdateBlocPage(
+                            flugramId: flugramId,
+                            parentPageIds: parentPageIds,
+                            blocId: blocId,
+                          );
+                        },
+                        routes: [
+                          GoRoute(
+                            path: DeleteBlocPage.routePath,
+                            name: DeleteBlocPage.routeName,
+                            builder: (context, state) {
+                              final flugramId =
+                                  state.pathParameters['flugramId']!;
+                              final parentPageIds = state
+                                  .pathParameters['parentPageIds']!
+                                  .split(',');
+                              final blocId = state.pathParameters['blocId']!;
+
+                              return DeleteBlocPage(
+                                flugramId: flugramId,
+                                parentPageIds: parentPageIds,
+                                blocId: blocId,
+                              );
+                            },
+                          ),
+                        ],
+                      ),
+                      GoRoute(
+                        path: UpdateSubpagePage.routePath,
+                        name: UpdateSubpagePage.routeName,
+                        builder: (context, state) {
+                          final flugramId = state.pathParameters['flugramId']!;
+                          final parentPageIds =
+                              state.pathParameters['parentPageIds']!.split(',');
+                          final pageId = state.pathParameters['pageId']!;
+
+                          return UpdateSubpagePage(
+                            flugramId: flugramId,
+                            parentPageIds: parentPageIds,
+                            pageId: pageId,
+                          );
+                        },
+                        routes: [
+                          GoRoute(
+                            path: DeleteSubpagePage.routePath,
+                            name: DeleteSubpagePage.routeName,
+                            builder: (context, state) {
+                              final flugramId =
+                                  state.pathParameters['flugramId']!;
+                              final parentPageIds = state
+                                  .pathParameters['parentPageIds']!
+                                  .split(',');
+                              final pageId = state.pathParameters['pageId']!;
+
+                              return DeleteSubpagePage(
+                                flugramId: flugramId,
+                                parentPageIds: parentPageIds,
+                                pageId: pageId,
+                              );
+                            },
+                          ),
+                        ],
                       ),
                       GoRoute(
                         path: CreateRepositoryPage.routePath,
