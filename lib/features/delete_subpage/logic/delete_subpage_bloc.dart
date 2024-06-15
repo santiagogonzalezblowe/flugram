@@ -1,5 +1,5 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/repositories/authenticated/subpage_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 
 class DeleteSubpageBloc extends BloweLoadBloc<void, BloweNoParams> {
   DeleteSubpageBloc(

@@ -1,5 +1,5 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/repositories/authenticated/bloc_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 
 class DeleteBlocBloc extends BloweLoadBloc<void, BloweNoParams> {
   DeleteBlocBloc(

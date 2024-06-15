@@ -1,4 +1,4 @@
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/flugram/logic/pages_bloc.dart';
 import 'package:flugram/features/flugram/ui/widgets/flugram_page_item.dart';
 import 'package:flugram/features/home/models/page_model.dart';
@@ -52,7 +52,7 @@ class _PagesPageViewState extends State<PagesPageView> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<PagesBloc, BloweBlocState>(
+    return BlocBuilder<PagesBloc, BloweState>(
       builder: (context, state) {
         if (state is BloweInProgress) {
           return const Center(

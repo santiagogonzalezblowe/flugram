@@ -1,4 +1,4 @@
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/home/logic/flugrams_bloc.dart';
 import 'package:flugram/features/home/models/flugram_model.dart';
 import 'package:flugram/features/home/ui/widgets/flugrams_list_view.dart';
@@ -9,7 +9,7 @@ class FlugramsListViewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<FlugramsBloc, BloweBlocState>(
+    return BlocBuilder<FlugramsBloc, BloweState>(
       builder: (context, state) {
         if (state is BloweInProgress) {
           return const Center(

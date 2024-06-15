@@ -1,5 +1,5 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/repositories/authenticated/repository_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/home/models/repository_model.dart';
 
 class RepositoryBloc extends BloweLoadBloc<RepositoryModel, BloweNoParams> {

@@ -1,4 +1,4 @@
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/flugram/logic/blocs_bloc.dart';
 import 'package:flugram/features/home/models/bloc_model.dart';
 import 'package:flugram/features/update_bloc/ui/page/update_bloc_page.dart';
@@ -16,7 +16,7 @@ class BlocsListViewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<BlocsBloc, BloweBlocState>(
+    return BlocBuilder<BlocsBloc, BloweState>(
       builder: (context, state) {
         if (state is BloweCompleted<List<BlocModel>>) {
           return ListView.builder(

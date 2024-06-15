@@ -1,4 +1,4 @@
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/forgot_password/logic/forgot_password_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

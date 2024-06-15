@@ -1,4 +1,4 @@
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/login/logic/login_bloc.dart';
 import 'package:flugram/features/login/logic/social_login_bloc.dart';
 import 'package:flutter/material.dart';

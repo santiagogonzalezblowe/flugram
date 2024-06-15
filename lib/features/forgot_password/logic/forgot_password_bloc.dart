@@ -1,5 +1,5 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/repositories/authentication_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 
 class ForgotPasswordBloc extends BloweLoadBloc<void, ForgotPasswordParams> {
   ForgotPasswordBloc(this._authenticationRepository);

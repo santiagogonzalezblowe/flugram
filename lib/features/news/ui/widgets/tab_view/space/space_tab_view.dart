@@ -1,5 +1,5 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/services/space/models/space_article_model.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/news/logic/space_articles_bloc.dart';
 import 'package:flugram/features/news/ui/widgets/tab_view/space/space_article_card.dart';
 import 'package:flugram/features/news/ui/widgets/tab_view/space/space_tab_view_blocs_provider.dart';

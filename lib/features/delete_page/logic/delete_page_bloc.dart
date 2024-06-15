@@ -1,5 +1,5 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/repositories/authenticated/page_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 
 class DeletePageBloc extends BloweLoadBloc<void, BloweNoParams> {
   DeletePageBloc(this._flugramId, this._pageId, this._pageRepository);

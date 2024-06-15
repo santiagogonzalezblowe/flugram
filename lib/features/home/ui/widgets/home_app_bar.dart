@@ -1,4 +1,4 @@
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/flugram/ui/page/flugram_page.dart';
 import 'package:flugram/features/home/logic/flugrams_bloc.dart';
 import 'package:flugram/features/home/models/flugram_model.dart';
@@ -11,7 +11,7 @@ class HomeAppBar extends AppBar {
   }) : super(
           title: const Text('Flugram'),
           actions: [
-            BlocBuilder<FlugramsBloc, BloweBlocState>(
+            BlocBuilder<FlugramsBloc, BloweState>(
               builder: (context, state) {
                 if (state is BloweCompleted<List<FlugramModel>>) {
                   return IconButton(

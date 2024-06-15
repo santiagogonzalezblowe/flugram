@@ -1,6 +1,6 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/constants/assets.dart';
 import 'package:flugram/app/widgets/form_header.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/home/models/page_model.dart';
 import 'package:flugram/features/update_subpage/logic/subpage_bloc.dart';
 import 'package:flugram/features/update_subpage/logic/update_subpage_blocs_provider.dart';
@@ -49,7 +49,7 @@ class UpdateSubpagePage extends StatelessWidget {
       child: UpdateSubpageListener(
         child: Scaffold(
           appBar: AppBar(),
-          body: BlocBuilder<SubpageBloc, BloweBlocState>(
+          body: BlocBuilder<SubpageBloc, BloweState>(
             builder: (context, state) {
               if (state is BloweCompleted<PageModel>) {
                 return ListView(

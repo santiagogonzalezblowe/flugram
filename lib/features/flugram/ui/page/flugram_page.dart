@@ -1,4 +1,4 @@
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/flugram/logic/flugram_blocs_provider.dart';
 import 'package:flugram/features/flugram/logic/flugram_watch_bloc.dart';
 import 'package:flugram/features/flugram/ui/widgets/flugram_app_bar.dart';
@@ -28,7 +28,7 @@ class FlugramPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlugramBlocsProvider(
       flugramId: flugramId,
-      child: BlocBuilder<FlugramWatchBloc, BloweBlocState>(
+      child: BlocBuilder<FlugramWatchBloc, BloweState>(
         builder: (context, state) {
           final flugram =
               state is BloweCompleted<FlugramModel> ? state.data : null;
@@ -42,7 +42,7 @@ class FlugramPage extends StatelessWidget {
     );
   }
 
-  Widget getBody(BloweBlocState state) {
+  Widget getBody(BloweState state) {
     if (state is BloweCompleted<FlugramModel>) {
       return Column(
         children: [

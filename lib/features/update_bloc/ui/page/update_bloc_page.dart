@@ -1,6 +1,6 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/constants/assets.dart';
 import 'package:flugram/app/widgets/form_header.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/update_bloc/logic/bloc_bloc.dart';
 import 'package:flugram/features/update_bloc/logic/update_bloc_blocs_provider.dart';
 import 'package:flugram/features/update_bloc/logic/update_bloc_listener.dart';
@@ -48,7 +48,7 @@ class UpdateBlocPage extends StatelessWidget {
       child: UpdateBlocListener(
         child: Scaffold(
           appBar: AppBar(),
-          body: BlocBuilder<BlocBloc, BloweBlocState>(
+          body: BlocBuilder<BlocBloc, BloweState>(
             builder: (context, state) {
               if (state is BloweCompleted<BlocBlocData>) {
                 return ListView(

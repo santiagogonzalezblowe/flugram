@@ -1,3 +1,0 @@
-class BloweNoParams {
-  const BloweNoParams();
-}

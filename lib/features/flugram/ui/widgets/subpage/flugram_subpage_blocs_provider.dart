@@ -1,5 +1,5 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/repositories/authenticated/subpage_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/flugram/logic/subpage_watch_bloc.dart';
 import 'package:flutter/material.dart';
 

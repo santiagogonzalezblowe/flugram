@@ -1,6 +1,6 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/constants/assets.dart';
 import 'package:flugram/app/widgets/form_header.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/home/models/page_model.dart';
 import 'package:flugram/features/update_page/logic/page_bloc.dart';
 import 'package:flugram/features/update_page/logic/update_page_blocs_provider.dart';
@@ -40,7 +40,7 @@ class UpdatePagePage extends StatelessWidget {
       child: UpdatePageListener(
         child: Scaffold(
           appBar: AppBar(),
-          body: BlocBuilder<PageBloc, BloweBlocState>(
+          body: BlocBuilder<PageBloc, BloweState>(
             builder: (context, state) {
               if (state is BloweCompleted<PageModel>) {
                 return ListView(

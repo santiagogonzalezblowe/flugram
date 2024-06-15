@@ -1,4 +1,4 @@
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/flugram/logic/subpages_bloc.dart';
 import 'package:flugram/features/home/models/page_model.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +13,7 @@ class SubpagesListViewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<SubpagesBloc, BloweBlocState>(
+    return BlocBuilder<SubpagesBloc, BloweState>(
       builder: (context, state) {
         if (state is BloweCompleted<List<PageModel>>) {
           return ListView.builder(

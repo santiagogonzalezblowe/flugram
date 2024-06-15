@@ -1,7 +1,7 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/repositories/authenticated/flugram_repository.dart';
 import 'package:flugram/app/repositories/authenticated/pages_repository.dart';
 import 'package:flugram/app/repositories/authenticated/repositories_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/flugram/logic/flugram_watch_bloc.dart';
 import 'package:flugram/features/flugram/logic/pages_bloc.dart';
 import 'package:flugram/features/flugram/logic/repositories_watch_bloc.dart';

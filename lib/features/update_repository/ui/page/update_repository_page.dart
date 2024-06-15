@@ -1,6 +1,6 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/constants/assets.dart';
 import 'package:flugram/app/widgets/form_header.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/home/models/repository_model.dart';
 import 'package:flugram/features/update_repository/logic/repository_bloc.dart';
 import 'package:flugram/features/update_repository/logic/update_repository_blocs_provider.dart';
@@ -40,7 +40,7 @@ class UpdateRepositoryPage extends StatelessWidget {
       child: UpdateRepositoryListener(
         child: Scaffold(
           appBar: AppBar(),
-          body: BlocBuilder<RepositoryBloc, BloweBlocState>(
+          body: BlocBuilder<RepositoryBloc, BloweState>(
             builder: (context, state) {
               if (state is BloweCompleted<RepositoryModel>) {
                 return ListView(

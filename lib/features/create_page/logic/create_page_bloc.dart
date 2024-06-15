@@ -1,6 +1,6 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flugram/app/repositories/authenticated/pages_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 
 class CreatePageBloc extends BloweLoadBloc<void, CreatePageParams> {
   CreatePageBloc(

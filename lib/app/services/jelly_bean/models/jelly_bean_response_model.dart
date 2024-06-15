@@ -1,5 +1,5 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/services/jelly_bean/models/jelly_bean_model.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 
 class JellyBeansResponseModel extends BlowePaginationModel<JellyBeanModel> {
   const JellyBeansResponseModel({

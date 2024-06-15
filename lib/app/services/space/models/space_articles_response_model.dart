@@ -1,5 +1,5 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/services/space/models/space_article_model.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 
 class SpaceArticlesResponseModel
     extends BlowePaginationModel<SpaceArticleModel> {

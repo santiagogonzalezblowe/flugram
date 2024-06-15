@@ -1,4 +1,4 @@
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/delete_page/logic/delete_page_bloc.dart';
 import 'package:flugram/features/flugram/ui/page/flugram_page.dart';
 import 'package:flutter/material.dart';

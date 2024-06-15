@@ -1,5 +1,5 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/repositories/authenticated/page_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/home/models/page_model.dart';
 
 class PageBloc extends BloweLoadBloc<PageModel, BloweNoParams> {

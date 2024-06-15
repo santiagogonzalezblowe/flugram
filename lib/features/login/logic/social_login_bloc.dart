@@ -1,6 +1,6 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/enums/social_media_type.dart';
 import 'package:flugram/app/repositories/authentication_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 
 class SocialLoginBloc extends BloweLoadBloc<void, SocialMediaType> {
   SocialLoginBloc(this._authenticationRepository);

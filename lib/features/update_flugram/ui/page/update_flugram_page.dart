@@ -1,6 +1,6 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/constants/assets.dart';
 import 'package:flugram/app/widgets/form_header.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/home/models/flugram_model.dart';
 import 'package:flugram/features/update_flugram/logic/flugram_load_bloc.dart';
 import 'package:flugram/features/update_flugram/logic/update_flugram_blocs_provider.dart';
@@ -33,7 +33,7 @@ class UpdateFlugramPage extends StatelessWidget {
       child: UpdateFlugramListener(
         child: Scaffold(
           appBar: AppBar(),
-          body: BlocBuilder<FlugramLoadBloc, BloweBlocState>(
+          body: BlocBuilder<FlugramLoadBloc, BloweState>(
             builder: (context, state) {
               if (state is BloweCompleted<FlugramModel>) {
                 return ListView(

@@ -1,6 +1,6 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/repositories/authenticated/bloc_repository.dart';
 import 'package:flugram/app/repositories/authenticated/repositories_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/create_bloc/logic/repositories_load_bloc.dart';
 import 'package:flugram/features/update_bloc/logic/bloc_bloc.dart';
 import 'package:flugram/features/update_bloc/logic/update_bloc_bloc.dart';

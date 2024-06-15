@@ -1,7 +1,7 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/constants/assets.dart';
 import 'package:flugram/app/enums/social_media_type.dart';
 import 'package:flugram/app/widgets/svg_icon_button.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/login/logic/social_login_bloc.dart';
 import 'package:flutter/material.dart';
 

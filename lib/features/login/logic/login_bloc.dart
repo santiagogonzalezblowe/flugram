@@ -1,5 +1,5 @@
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/repositories/authentication_repository.dart';
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
 
 class LoginBloc extends BloweLoadBloc<void, LoginParams> {
   LoginBloc(this._authenticationRepository);

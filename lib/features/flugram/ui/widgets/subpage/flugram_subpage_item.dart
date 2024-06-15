@@ -1,4 +1,4 @@
-import 'package:flugram/blowe_bloc/blowe_bloc.dart';
+import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/features/flugram/logic/subpage_watch_bloc.dart';
 import 'package:flugram/features/flugram/ui/widgets/subpage/flugram_subpage_blocs_provider.dart';
 import 'package:flugram/features/flugram/ui/widgets/subpage/flugram_subpage_card.dart';
@@ -28,7 +28,7 @@ class AppSubpageItem extends StatelessWidget {
       parentPageIds: subpage.parentPageIds,
       child: FlugramSubpageListener(
         onPopPressed: onPopPressed,
-        child: BlocBuilder<SubpageWatchBloc, BloweBlocState>(
+        child: BlocBuilder<SubpageWatchBloc, BloweState>(
           builder: (context, state) {
             if (state is BloweInProgress) {
               return const Center(
