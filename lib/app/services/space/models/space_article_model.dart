@@ -1,5 +1,5 @@
-class SpaceflightArticleModel {
-  const SpaceflightArticleModel({
+class SpaceArticleModel {
+  const SpaceArticleModel({
     required this.id,
     required this.title,
     required this.url,
@@ -13,8 +13,8 @@ class SpaceflightArticleModel {
     required this.events,
   });
 
-  factory SpaceflightArticleModel.fromJson(Map<String, dynamic> json) =>
-      SpaceflightArticleModel(
+  factory SpaceArticleModel.fromJson(Map<String, dynamic> json) =>
+      SpaceArticleModel(
         id: json['id'] as int,
         title: json['title'] as String,
         url: json['url'] as String,

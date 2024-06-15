@@ -1,5 +1,5 @@
 import 'package:flugram/app/services/jelly_bean/spaceflight_service.dart';
-import 'package:flugram/app/services/spaceflight/spaceflight_service.dart';
+import 'package:flugram/app/services/space/space_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,7 +16,7 @@ class AppServicesProvider extends StatelessWidget {
     return MultiRepositoryProvider(
       providers: [
         RepositoryProvider(
-          create: (context) => SpaceflightService(),
+          create: (context) => SpaceService(),
         ),
         RepositoryProvider(
           create: (context) => JellyBeanService(),

@@ -8,7 +8,6 @@ class FlugramWatchBloc extends BloweWatchBloc<FlugramModel, String> {
   final FlugramRepository _flugramRepository;
 
   @override
-  Stream<FlugramModel> watch(String params) {
-    return _flugramRepository.watchFlugram(params);
-  }
+  Stream<FlugramModel> watch(String params) =>
+      _flugramRepository.watchFlugram(params);
 }

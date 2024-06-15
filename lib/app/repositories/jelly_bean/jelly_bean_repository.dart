@@ -8,24 +8,24 @@ class JellyBeanRepository {
 
   final JellyBeanService service;
 
-  JellyBeansResponseModel? lastJellyBeansResponseModel;
+  JellyBeansResponseModel? _lastJellyBeansResponseModel;
 
   Future<JellyBeansResponseModel> loadJellyBeans(int page) async {
     final jellyBeansResponseModel = await service.loadJellyBeans(page);
 
     if (page != 0) {
-      final items = lastJellyBeansResponseModel?.items ?? [];
+      final items = _lastJellyBeansResponseModel?.items ?? [];
 
       jellyBeansResponseModel.items.insertAll(0, items);
     }
 
-    lastJellyBeansResponseModel = jellyBeansResponseModel;
+    _lastJellyBeansResponseModel = jellyBeansResponseModel;
 
     return jellyBeansResponseModel;
   }
 
   Future<JellyBeanModel> loadJellyBean(int id) {
-    final jellyBean = lastJellyBeansResponseModel?.items.firstWhereOrNull(
+    final jellyBean = _lastJellyBeansResponseModel?.items.firstWhereOrNull(
       (element) => element.beanId == id,
     );
 

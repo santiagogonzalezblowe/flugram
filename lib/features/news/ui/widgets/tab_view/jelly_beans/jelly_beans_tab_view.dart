@@ -22,7 +22,7 @@ class _JellyBeansTabViewState extends State<JellyBeansTabView>
     super.build(context);
     return JellyBeansTabViewBlocsProvider(
       child: BlowePaginationListView<JellyBeansBloc, JellyBeanModel>(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        padding: const EdgeInsets.only(top: 12),
         itemBuilder: (context, item) => JellyBeanCard(item),
       ),
     );

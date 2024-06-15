@@ -15,7 +15,7 @@ class FlugramModel {
   ) {
     final data = doc.data();
 
-    if (data == null) throw StateError('Document does not exist');
+    if (data == null) throw Exception('Document does not exist');
 
     return FlugramModel(
       id: doc.id,

@@ -12,9 +12,9 @@ import 'package:flugram/app/repositories/authenticated/subpage_repository.dart';
 import 'package:flugram/app/repositories/authenticated/subpages_repository.dart';
 import 'package:flugram/app/repositories/authentication_repository.dart';
 import 'package:flugram/app/repositories/jelly_bean/jelly_bean_repository.dart';
-import 'package:flugram/app/repositories/spaceflight/spaceflight_repository.dart';
+import 'package:flugram/app/repositories/space/space_repository.dart';
 import 'package:flugram/app/services/jelly_bean/spaceflight_service.dart';
-import 'package:flugram/app/services/spaceflight/spaceflight_service.dart';
+import 'package:flugram/app/services/space/space_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -99,8 +99,8 @@ class AppRepositoriesProvider extends StatelessWidget {
           ),
         ),
         RepositoryProvider(
-          create: (context) => SpaceflightRepository(
-            context.read<SpaceflightService>(),
+          create: (context) => SpaceRepository(
+            context.read<SpaceService>(),
           ),
         ),
         RepositoryProvider(

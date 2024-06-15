@@ -13,9 +13,11 @@ import 'package:flugram/features/delete_subpage/ui/page/delete_subpage_page.dart
 import 'package:flugram/features/flugram/ui/page/flugram_page.dart';
 import 'package:flugram/features/forgot_password/ui/page/forgot_password_page.dart';
 import 'package:flugram/features/home/ui/page/home_page.dart';
+import 'package:flugram/features/jelly_bean/ui/page/jelly_bean_page.dart';
 import 'package:flugram/features/login/ui/page/login_page.dart';
 import 'package:flugram/features/news/ui/page/news_page.dart';
 import 'package:flugram/features/sign_up/ui/page/sign_up_page.dart';
+import 'package:flugram/features/space_article/ui/page/space_article_page.dart';
 import 'package:flugram/features/update_bloc/ui/page/update_bloc_page.dart';
 import 'package:flugram/features/update_flugram/ui/page/update_flugram_page.dart';
 import 'package:flugram/features/update_page/ui/page/update_page_page.dart';
@@ -274,6 +276,30 @@ GoRouter get goRouter {
                 path: NewsPage.routePath,
                 name: NewsPage.routeName,
                 builder: (context, state) => const NewsPage(),
+                routes: [
+                  GoRoute(
+                    path: SpaceArticlePage.routePath,
+                    name: SpaceArticlePage.routeName,
+                    builder: (context, state) {
+                      final articleId = int.parse(
+                        state.pathParameters['articleId']!,
+                      );
+
+                      return SpaceArticlePage(articleId);
+                    },
+                  ),
+                  GoRoute(
+                    path: JellyBeanPage.routePath,
+                    name: JellyBeanPage.routeName,
+                    builder: (context, state) {
+                      final beanId = int.parse(
+                        state.pathParameters['beanId']!,
+                      );
+
+                      return JellyBeanPage(beanId);
+                    },
+                  ),
+                ],
               ),
             ],
           ),
