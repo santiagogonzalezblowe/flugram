@@ -36,11 +36,10 @@ packages:
   blowe_bloc:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: a6ba0207d4b12fff4162b25e22f3e30e4af03ef7
-      url: "https://github.com/santiagogonzalezblowe/blowe_bloc.git"
-    source: git
+      name: blowe_bloc
+      sha256: "73e6c49e988327e143cbca220162966722151551b1fa9341bdf50e943f985ef3"
+      url: "https://pub.dev"
+    source: hosted
     version: "0.1.0"
   boolean_selector:
     dependency: transitive
