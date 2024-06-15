@@ -37,10 +37,10 @@ packages:
     dependency: "direct main"
     description:
       name: blowe_bloc
-      sha256: "73e6c49e988327e143cbca220162966722151551b1fa9341bdf50e943f985ef3"
+      sha256: "1a6c03ba0c06ea4cf457a13fe785bae083e8d38331d2828654962b4b5aeddafa"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.0"
+    version: "0.1.1"
   boolean_selector:
     dependency: transitive
     description:
