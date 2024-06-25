@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
+import 'package:flugram/app/services/jelly_bean/jelly_bean_service.dart';
 import 'package:flugram/app/services/jelly_bean/models/jelly_bean_model.dart';
 import 'package:flugram/app/services/jelly_bean/models/jelly_bean_response_model.dart';
-import 'package:flugram/app/services/jelly_bean/spaceflight_service.dart';
 
 class JellyBeanRepository {
   JellyBeanRepository(this.service);

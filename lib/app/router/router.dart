@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flugram/app/widgets/bottom_navigation_scaffold.dart';
+import 'package:flugram/app/widgets/shell_scaffold.dart';
 import 'package:flugram/features/create_bloc/ui/page/create_bloc_page.dart';
 import 'package:flugram/features/create_flugram/ui/page/create_flugram_page.dart';
 import 'package:flugram/features/create_page/ui/page/create_page_page.dart';

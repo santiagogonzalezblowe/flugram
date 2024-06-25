@@ -21,9 +21,11 @@ class _JellyBeansTabViewState extends State<JellyBeansTabView>
   Widget build(BuildContext context) {
     super.build(context);
     return JellyBeansTabViewBlocsProvider(
-      child: BlowePaginationListView<JellyBeansBloc, JellyBeanModel>(
+      child: BlowePaginationListView<JellyBeansBloc, JellyBeanModel,
+          BloweNoParams, void>(
         padding: const EdgeInsets.only(top: 12),
         itemBuilder: (context, item) => JellyBeanCard(item),
+        paramsProvider: () => const BloweNoParams(),
       ),
     );
   }

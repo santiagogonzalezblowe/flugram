@@ -21,9 +21,11 @@ class _SpaceTabViewState extends State<SpaceTabView>
   Widget build(BuildContext context) {
     super.build(context);
     return SpaceTabViewBlocsProvider(
-      child: BlowePaginationListView<SpaceArticlesBloc, SpaceArticleModel>(
+      child: BlowePaginationListView<SpaceArticlesBloc, SpaceArticleModel,
+          BloweNoParams, void>(
         padding: const EdgeInsets.only(top: 12),
         itemBuilder: (context, item) => SpaceArticleCard(item),
+        paramsProvider: () => const BloweNoParams(),
       ),
     );
   }
