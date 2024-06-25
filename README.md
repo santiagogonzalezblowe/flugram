@@ -101,7 +101,7 @@ The app supports multiple languages using `flutter_localizations` with English (
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/flugram.git
+   git clone https://github.com/santiagogonzalezblowe/flugram.git
    ```
 2. Install dependencies:
    ```sh
