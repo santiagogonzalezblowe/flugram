@@ -42,7 +42,7 @@ class _UpdateRepositoryFormState extends State<UpdateRepositoryForm> {
       key: _formKey,
       child: Column(
         children: [
-          BloweBlocSelector<UpdateRepositoryBloc>(
+          BloweBlocSelector<UpdateRepositoryBloc, void>(
             builder: (context, enabled) => RepositoryNameTextFormField(
               controller: _nameController,
               enabled: enabled,
@@ -50,7 +50,7 @@ class _UpdateRepositoryFormState extends State<UpdateRepositoryForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<UpdateRepositoryBloc>(
+          BloweBlocSelector<UpdateRepositoryBloc, void>(
             builder: (context, enabled) => RepositoryDescriptionTextFormField(
               controller: _descriptionController,
               enabled: enabled,
@@ -65,7 +65,7 @@ class _UpdateRepositoryFormState extends State<UpdateRepositoryForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<UpdateRepositoryBloc, ElevatedButton>(
+          BloweBlocButton<UpdateRepositoryBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
@@ -78,7 +78,7 @@ class _UpdateRepositoryFormState extends State<UpdateRepositoryForm> {
           const SizedBox(height: 16),
           const Divider(),
           const SizedBox(height: 16),
-          BloweBlocButton<UpdateRepositoryBloc, ElevatedButton>(
+          BloweBlocButton<UpdateRepositoryBloc, ElevatedButton, void>(
             onPressed: () => DeleteRepositoryPage.go(
               context,
               widget.flugramId,

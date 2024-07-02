@@ -40,7 +40,7 @@ class _UpdateFlugramFormState extends State<UpdateFlugramForm> {
       child: Column(
         children: [
           const SizedBox(height: 16),
-          BloweBlocSelector<UpdateFlugramBloc>(
+          BloweBlocSelector<UpdateFlugramBloc, void>(
             builder: (context, enabled) => FlugramNameTextFormField(
               controller: _nameController,
               enabled: enabled,
@@ -48,7 +48,7 @@ class _UpdateFlugramFormState extends State<UpdateFlugramForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<UpdateFlugramBloc>(
+          BloweBlocSelector<UpdateFlugramBloc, void>(
             builder: (context, enabled) => FlugramDescriptionTextFormField(
               controller: _descriptionController,
               enabled: enabled,
@@ -61,7 +61,7 @@ class _UpdateFlugramFormState extends State<UpdateFlugramForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<UpdateFlugramBloc, ElevatedButton>(
+          BloweBlocButton<UpdateFlugramBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
@@ -72,7 +72,7 @@ class _UpdateFlugramFormState extends State<UpdateFlugramForm> {
           const SizedBox(height: 16),
           const Divider(),
           const SizedBox(height: 16),
-          BloweBlocButton<UpdateFlugramBloc, ElevatedButton>(
+          BloweBlocButton<UpdateFlugramBloc, ElevatedButton, void>(
             onPressed: () => DeleteFlugramPage.go(context, widget.flugram.id),
             text: AppLocalizations.of(context)!.delete,
           ),

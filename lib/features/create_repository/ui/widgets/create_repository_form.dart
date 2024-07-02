@@ -32,7 +32,7 @@ class _CreateRepositoryFormState extends State<CreateRepositoryForm> {
       key: _formKey,
       child: Column(
         children: [
-          BloweBlocSelector<CreateRepositoryBloc>(
+          BloweBlocSelector<CreateRepositoryBloc, void>(
             builder: (context, enabled) => RepositoryNameTextFormField(
               controller: _repositoryNameController,
               enabled: enabled,
@@ -40,7 +40,7 @@ class _CreateRepositoryFormState extends State<CreateRepositoryForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<CreateRepositoryBloc>(
+          BloweBlocSelector<CreateRepositoryBloc, void>(
             builder: (context, enabled) => RepositoryDescriptionTextFormField(
               controller: _repositoryDescriptionController,
               enabled: enabled,
@@ -53,7 +53,7 @@ class _CreateRepositoryFormState extends State<CreateRepositoryForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<CreateRepositoryBloc, ElevatedButton>(
+          BloweBlocButton<CreateRepositoryBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 

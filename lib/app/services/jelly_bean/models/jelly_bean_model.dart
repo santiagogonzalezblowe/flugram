@@ -1,5 +1,7 @@
-class JellyBeanModel {
-  const JellyBeanModel({
+import 'package:blowe_bloc/blowe_bloc.dart';
+
+class JellyBeanModel extends BloweSerializableItem {
+  JellyBeanModel({
     required this.beanId,
     required this.groupName,
     required this.ingredients,
@@ -35,6 +37,24 @@ class JellyBeanModel {
         kosher: json['kosher'] as bool,
       );
 
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      'beanId': beanId,
+      'groupName': groupName,
+      'ingredients': ingredients,
+      'flavorName': flavorName,
+      'description': description,
+      'colorGroup': colorGroup,
+      'backgroundColor': backgroundColor,
+      'imageUrl': imageUrl,
+      'glutenFree': glutenFree,
+      'sugarFree': sugarFree,
+      'seasonal': seasonal,
+      'kosher': kosher,
+    };
+  }
+
   final int beanId;
   final List<String> groupName;
   final List<String> ingredients;
@@ -47,4 +67,7 @@ class JellyBeanModel {
   final bool sugarFree;
   final bool seasonal;
   final bool kosher;
+
+  @override
+  List<Object> get props => [beanId];
 }

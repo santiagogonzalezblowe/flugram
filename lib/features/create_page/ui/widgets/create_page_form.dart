@@ -35,7 +35,7 @@ class _CreatePageFormState extends State<CreatePageForm> {
       key: _formKey,
       child: Column(
         children: [
-          BloweBlocSelector<CreatePageBloc>(
+          BloweBlocSelector<CreatePageBloc, void>(
             builder: (context, enabled) => PageNameTextFormField(
               controller: _pageNameController,
               enabled: enabled,
@@ -43,7 +43,7 @@ class _CreatePageFormState extends State<CreatePageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<CreatePageBloc>(
+          BloweBlocSelector<CreatePageBloc, void>(
             builder: (context, enabled) => PageDescriptionTextFormField(
               controller: _pageDescriptionController,
               enabled: enabled,
@@ -51,7 +51,7 @@ class _CreatePageFormState extends State<CreatePageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<CreatePageBloc>(
+          BloweBlocSelector<CreatePageBloc, void>(
             builder: (context, enabled) => PagePathTextFormField(
               controller: _pagePathController,
               enabled: enabled,
@@ -64,7 +64,7 @@ class _CreatePageFormState extends State<CreatePageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<CreatePageBloc, ElevatedButton>(
+          BloweBlocButton<CreatePageBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 

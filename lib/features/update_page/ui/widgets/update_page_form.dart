@@ -44,7 +44,7 @@ class _UpdatePageFormState extends State<UpdatePageForm> {
       key: _formKey,
       child: Column(
         children: [
-          BloweBlocSelector<UpdatePageBloc>(
+          BloweBlocSelector<UpdatePageBloc, void>(
             builder: (context, enabled) => PageNameTextFormField(
               controller: _nameController,
               enabled: enabled,
@@ -52,7 +52,7 @@ class _UpdatePageFormState extends State<UpdatePageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<UpdatePageBloc>(
+          BloweBlocSelector<UpdatePageBloc, void>(
             builder: (context, enabled) => PageDescriptionTextFormField(
               controller: _descriptionController,
               enabled: enabled,
@@ -60,7 +60,7 @@ class _UpdatePageFormState extends State<UpdatePageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<UpdatePageBloc>(
+          BloweBlocSelector<UpdatePageBloc, void>(
             builder: (context, enabled) => PagePathTextFormField(
               controller: _pathController,
               enabled: enabled,
@@ -75,7 +75,7 @@ class _UpdatePageFormState extends State<UpdatePageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<UpdatePageBloc, ElevatedButton>(
+          BloweBlocButton<UpdatePageBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
@@ -102,7 +102,7 @@ class _UpdatePageFormState extends State<UpdatePageForm> {
           const SizedBox(height: 16),
           const Divider(),
           const SizedBox(height: 16),
-          BloweBlocButton<UpdatePageBloc, ElevatedButton>(
+          BloweBlocButton<UpdatePageBloc, ElevatedButton, void>(
             onPressed: () => DeletePagePage.go(
               context,
               widget.flugramId,

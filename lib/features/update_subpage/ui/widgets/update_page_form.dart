@@ -47,7 +47,7 @@ class _UpdateSubpageFormState extends State<UpdateSubpageForm> {
       key: _formKey,
       child: Column(
         children: [
-          BloweBlocSelector<UpdateSubpageBloc>(
+          BloweBlocSelector<UpdateSubpageBloc, void>(
             builder: (context, enabled) => PageNameTextFormField(
               controller: _nameController,
               enabled: enabled,
@@ -55,7 +55,7 @@ class _UpdateSubpageFormState extends State<UpdateSubpageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<UpdateSubpageBloc>(
+          BloweBlocSelector<UpdateSubpageBloc, void>(
             builder: (context, enabled) => PageDescriptionTextFormField(
               controller: _descriptionController,
               enabled: enabled,
@@ -63,7 +63,7 @@ class _UpdateSubpageFormState extends State<UpdateSubpageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<UpdateSubpageBloc>(
+          BloweBlocSelector<UpdateSubpageBloc, void>(
             builder: (context, enabled) => PagePathTextFormField(
               controller: _pathController,
               enabled: enabled,
@@ -78,7 +78,7 @@ class _UpdateSubpageFormState extends State<UpdateSubpageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<UpdateSubpageBloc, ElevatedButton>(
+          BloweBlocButton<UpdateSubpageBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
@@ -91,7 +91,7 @@ class _UpdateSubpageFormState extends State<UpdateSubpageForm> {
           const SizedBox(height: 16),
           const Divider(),
           const SizedBox(height: 16),
-          BloweBlocButton<UpdateSubpageBloc, ElevatedButton>(
+          BloweBlocButton<UpdateSubpageBloc, ElevatedButton, void>(
             onPressed: () => DeleteSubpagePage.go(
               context,
               widget.flugramId,

@@ -40,7 +40,7 @@ class _CreateSubpageFormState extends State<CreateSubpageForm> {
       key: _formKey,
       child: Column(
         children: [
-          BloweBlocSelector<CreateSubpageBloc>(
+          BloweBlocSelector<CreateSubpageBloc, void>(
             builder: (context, enabled) => PageNameTextFormField(
               controller: _pageNameController,
               enabled: enabled,
@@ -48,7 +48,7 @@ class _CreateSubpageFormState extends State<CreateSubpageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<CreateSubpageBloc>(
+          BloweBlocSelector<CreateSubpageBloc, void>(
             builder: (context, enabled) => PageDescriptionTextFormField(
               controller: _pageDescriptionController,
               enabled: enabled,
@@ -56,7 +56,7 @@ class _CreateSubpageFormState extends State<CreateSubpageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<CreateSubpageBloc>(
+          BloweBlocSelector<CreateSubpageBloc, void>(
             builder: (context, enabled) => PagePathTextFormField(
               controller: _pagePathController,
               enabled: enabled,
@@ -69,7 +69,7 @@ class _CreateSubpageFormState extends State<CreateSubpageForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<CreateSubpageBloc, ElevatedButton>(
+          BloweBlocButton<CreateSubpageBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 

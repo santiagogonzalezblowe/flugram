@@ -32,7 +32,7 @@ class _LoginFormState extends State<LoginForm> {
       key: _formKey,
       child: Column(
         children: [
-          BloweBlocSelector<LoginBloc>(
+          BloweBlocSelector<LoginBloc, void>(
             builder: (context, enabled) => EmailTextFormField(
               controller: _emailController,
               enabled: enabled,
@@ -40,7 +40,7 @@ class _LoginFormState extends State<LoginForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<LoginBloc>(
+          BloweBlocSelector<LoginBloc, void>(
             builder: (context, enabled) => PasswordTextFormField(
               controller: _passwordController,
               enabled: enabled,
@@ -53,7 +53,7 @@ class _LoginFormState extends State<LoginForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<LoginBloc, ElevatedButton>(
+          BloweBlocButton<LoginBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 

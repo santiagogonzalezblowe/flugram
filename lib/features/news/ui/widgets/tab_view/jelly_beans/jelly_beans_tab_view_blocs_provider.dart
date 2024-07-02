@@ -1,5 +1,6 @@
 import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/repositories/jelly_bean/jelly_bean_repository.dart';
+import 'package:flugram/features/news/logic/jelly_bean_search_bloc.dart';
 import 'package:flugram/features/news/logic/jelly_beans_bloc.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,11 @@ class JellyBeansTabViewBlocsProvider extends StatelessWidget {
           create: (context) => JellyBeansBloc(
             context.read<JellyBeanRepository>(),
           )..add(const BloweFetch(BloweNoParams())),
+        ),
+        BlocProvider(
+          create: (context) => JellyBeanSearchBloc(
+            context.read<JellyBeanRepository>(),
+          ),
         ),
       ],
       child: child,

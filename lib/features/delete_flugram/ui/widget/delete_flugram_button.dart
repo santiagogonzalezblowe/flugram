@@ -8,7 +8,7 @@ class DeleteFlugramButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BloweBlocButton<DeleteFlugramBloc, ElevatedButton>(
+    return BloweBlocButton<DeleteFlugramBloc, ElevatedButton, void>(
       onPressed: () => context.read<DeleteFlugramBloc>().add(
             const BloweFetch(BloweNoParams()),
           ),

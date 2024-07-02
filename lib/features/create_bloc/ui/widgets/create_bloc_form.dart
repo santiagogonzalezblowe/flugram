@@ -41,7 +41,7 @@ class _CreateBlocFormState extends State<CreateBlocForm> {
       key: _formKey,
       child: Column(
         children: [
-          BloweBlocSelector<CreateBlocBloc>(
+          BloweBlocSelector<CreateBlocBloc, void>(
             builder: (context, enabled) => BlocNameTextFormField(
               controller: _pageNameController,
               enabled: enabled,
@@ -49,7 +49,7 @@ class _CreateBlocFormState extends State<CreateBlocForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<CreateBlocBloc>(
+          BloweBlocSelector<CreateBlocBloc, void>(
             builder: (context, enabled) => BlocDescriptionTextFormField(
               controller: _pageDescriptionController,
               enabled: enabled,
@@ -74,7 +74,7 @@ class _CreateBlocFormState extends State<CreateBlocForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<CreateBlocBloc, ElevatedButton>(
+          BloweBlocButton<CreateBlocBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 

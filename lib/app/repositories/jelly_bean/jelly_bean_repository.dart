@@ -9,6 +9,7 @@ class JellyBeanRepository {
   final JellyBeanService service;
 
   JellyBeansResponseModel? _lastJellyBeansResponseModel;
+  JellyBeansResponseModel? _lastSearchJellyBeansResponseModel;
 
   Future<JellyBeansResponseModel> loadJellyBeans(int page) async {
     final jellyBeansResponseModel = await service.loadJellyBeans(page);
@@ -20,6 +21,26 @@ class JellyBeanRepository {
     }
 
     _lastJellyBeansResponseModel = jellyBeansResponseModel;
+
+    return jellyBeansResponseModel;
+  }
+
+  Future<JellyBeansResponseModel> loadJellyBeansByGroupName(
+    int page,
+    String groupName,
+  ) async {
+    final jellyBeansResponseModel = await service.loadJellyBeansByGroupName(
+      page,
+      groupName,
+    );
+
+    if (page != 0) {
+      final items = _lastSearchJellyBeansResponseModel?.items ?? [];
+
+      jellyBeansResponseModel.items.insertAll(0, items);
+    }
+
+    _lastSearchJellyBeansResponseModel = jellyBeansResponseModel;
 
     return jellyBeansResponseModel;
   }

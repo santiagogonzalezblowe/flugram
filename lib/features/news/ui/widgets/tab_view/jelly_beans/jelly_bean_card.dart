@@ -3,9 +3,10 @@ import 'package:flugram/features/jelly_bean/ui/page/jelly_bean_page.dart';
 import 'package:flutter/material.dart';
 
 class JellyBeanCard extends StatelessWidget {
-  const JellyBeanCard(this.item, {super.key});
+  const JellyBeanCard(this.item, {this.onTap, super.key});
 
   final JellyBeanModel item;
+  final GestureTapCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class JellyBeanCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
-        onTap: () => JellyBeanPage.go(context, item.beanId),
+        onTap: onTap ?? () => JellyBeanPage.go(context, item.beanId),
         child: Column(
           children: [
             Hero(

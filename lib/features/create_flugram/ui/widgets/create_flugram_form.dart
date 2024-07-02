@@ -32,7 +32,7 @@ class _CreateFlugramFormState extends State<CreateFlugramForm> {
       key: _formKey,
       child: Column(
         children: [
-          BloweBlocSelector<CreateFlugramBloc>(
+          BloweBlocSelector<CreateFlugramBloc, void>(
             builder: (context, enabled) => FlugramNameTextFormField(
               controller: _appNameController,
               enabled: enabled,
@@ -40,7 +40,7 @@ class _CreateFlugramFormState extends State<CreateFlugramForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<CreateFlugramBloc>(
+          BloweBlocSelector<CreateFlugramBloc, void>(
             builder: (context, enabled) => FlugramDescriptionTextFormField(
               controller: _appDescriptionController,
               enabled: enabled,
@@ -53,7 +53,7 @@ class _CreateFlugramFormState extends State<CreateFlugramForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<CreateFlugramBloc, ElevatedButton>(
+          BloweBlocButton<CreateFlugramBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 

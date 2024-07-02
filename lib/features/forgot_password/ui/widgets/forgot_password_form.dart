@@ -29,7 +29,7 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
       key: _formKey,
       child: Column(
         children: [
-          BloweBlocSelector<ForgotPasswordBloc>(
+          BloweBlocSelector<ForgotPasswordBloc, void>(
             builder: (context, enabled) => EmailTextFormField(
               controller: _emailController,
               enabled: enabled,
@@ -46,7 +46,7 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<ForgotPasswordBloc, ElevatedButton>(
+          BloweBlocButton<ForgotPasswordBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 

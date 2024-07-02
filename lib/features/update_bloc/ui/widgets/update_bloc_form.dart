@@ -51,7 +51,7 @@ class _UpdateBlocFormState extends State<UpdateBlocForm> {
       key: _formKey,
       child: Column(
         children: [
-          BloweBlocSelector<UpdateBlocBloc>(
+          BloweBlocSelector<UpdateBlocBloc, void>(
             builder: (context, enabled) => PageNameTextFormField(
               controller: _nameController,
               enabled: enabled,
@@ -59,7 +59,7 @@ class _UpdateBlocFormState extends State<UpdateBlocForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<UpdateBlocBloc>(
+          BloweBlocSelector<UpdateBlocBloc, void>(
             builder: (context, enabled) => PageDescriptionTextFormField(
               controller: _descriptionController,
               enabled: enabled,
@@ -67,7 +67,7 @@ class _UpdateBlocFormState extends State<UpdateBlocForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocSelector<UpdateBlocBloc>(
+          BloweBlocSelector<UpdateBlocBloc, void>(
             builder: (context, enabled) =>
                 RepositoryDropdownButtonFormFieldBuilder(
               enabled: enabled,
@@ -80,7 +80,7 @@ class _UpdateBlocFormState extends State<UpdateBlocForm> {
             ),
           ),
           const SizedBox(height: 16),
-          BloweBlocButton<UpdateBlocBloc, ElevatedButton>(
+          BloweBlocButton<UpdateBlocBloc, ElevatedButton, void>(
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
@@ -93,7 +93,7 @@ class _UpdateBlocFormState extends State<UpdateBlocForm> {
           const SizedBox(height: 16),
           const Divider(),
           const SizedBox(height: 16),
-          BloweBlocButton<UpdateBlocBloc, ElevatedButton>(
+          BloweBlocButton<UpdateBlocBloc, ElevatedButton, void>(
             onPressed: () => DeleteBlocPage.go(
               context,
               widget.flugramId,

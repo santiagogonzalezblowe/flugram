@@ -48,8 +48,9 @@ Flugram is a dynamic Flutter application leveraging `blowe_bloc`, `go_router`, `
 ### News
 
 - **News Section**: Contains two tabs, Spaces & Jelly Bean, each with:
-  - **OnRefresh**: Refresh the list of news articles.
+  - **OnRefresh**: Refresh the list of news articles. This feature can be enabled or disabled as needed.
   - **Pagination**: Load more articles as the user scrolls.
+  - **Search**: Search functionality added for Jelly Bean articles.
 
 ### Space Articles
 

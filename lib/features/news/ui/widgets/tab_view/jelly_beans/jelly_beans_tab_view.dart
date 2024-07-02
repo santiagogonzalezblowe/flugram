@@ -2,6 +2,7 @@ import 'package:blowe_bloc/blowe_bloc.dart';
 import 'package:flugram/app/services/jelly_bean/models/jelly_bean_model.dart';
 import 'package:flugram/features/news/logic/jelly_beans_bloc.dart';
 import 'package:flugram/features/news/ui/widgets/tab_view/jelly_beans/jelly_bean_card.dart';
+import 'package:flugram/features/news/ui/widgets/tab_view/jelly_beans/jelly_bean_search_button.dart';
 import 'package:flugram/features/news/ui/widgets/tab_view/jelly_beans/jelly_beans_tab_view_blocs_provider.dart';
 import 'package:flutter/material.dart';
 
@@ -21,11 +22,14 @@ class _JellyBeansTabViewState extends State<JellyBeansTabView>
   Widget build(BuildContext context) {
     super.build(context);
     return JellyBeansTabViewBlocsProvider(
-      child: BlowePaginationListView<JellyBeansBloc, JellyBeanModel,
-          BloweNoParams, void>(
-        padding: const EdgeInsets.only(top: 12),
-        itemBuilder: (context, item) => JellyBeanCard(item),
-        paramsProvider: () => const BloweNoParams(),
+      child: Scaffold(
+        floatingActionButton: const JellyBeanSearchButton(),
+        body: BlowePaginationListView<JellyBeansBloc, JellyBeanModel,
+            BloweNoParams, void>(
+          padding: const EdgeInsets.only(top: 12),
+          itemBuilder: (context, item) => JellyBeanCard(item),
+          paramsProvider: () => const BloweNoParams(),
+        ),
       ),
     );
   }
