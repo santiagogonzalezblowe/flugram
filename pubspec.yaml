@@ -6,7 +6,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.0.5 <4.0.0"
+  sdk: ">=3.4.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -24,7 +24,7 @@ dependencies:
   uuid: ^4.4.0
   http: ^1.2.1
   url_launcher: ^6.3.0
-  blowe_bloc: ^0.3.0
+  blowe_bloc: ^0.3.1
   # blowe_bloc:
   #   git:
   #     url: https://github.com/santiagogonzalezblowe/blowe_bloc.git
