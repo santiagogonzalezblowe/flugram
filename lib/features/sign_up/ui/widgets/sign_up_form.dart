@@ -48,7 +48,7 @@ class _SignUpFormState extends State<SignUpForm> {
               onEditingComplete: () {
                 if (!_formKey.currentState!.validate()) return;
 
-                context.read<SignUpBloc>().add(BloweFetch(params));
+                context.read<SignUpBloc>().fetch(params);
               },
             ),
           ),
@@ -57,7 +57,7 @@ class _SignUpFormState extends State<SignUpForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<SignUpBloc>().add(BloweFetch(params));
+              context.read<SignUpBloc>().fetch(params);
             },
             text: AppLocalizations.of(context)!.signUp,
           ),

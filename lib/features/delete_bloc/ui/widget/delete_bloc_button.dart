@@ -9,8 +9,8 @@ class DeleteBlocButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BloweBlocButton<DeleteBlocBloc, ElevatedButton, void>(
-      onPressed: () => context.read<DeleteBlocBloc>().add(
-            const BloweFetch(BloweNoParams()),
+      onPressed: () => context.read<DeleteBlocBloc>().fetch(
+            const BloweNoParams(),
           ),
       text: AppLocalizations.of(context)!.delete,
     );

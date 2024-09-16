@@ -22,7 +22,7 @@ class BlocsBlocsProvider extends StatelessWidget {
         context.read<BlocsRepository>(),
         flugramId,
         parentPageIds,
-      )..add(const BloweFetch(BloweNoParams())),
+      )..fetch(const BloweNoParams()),
       child: child,
     );
   }

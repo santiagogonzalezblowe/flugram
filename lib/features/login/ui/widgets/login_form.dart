@@ -48,7 +48,7 @@ class _LoginFormState extends State<LoginForm> {
               onEditingComplete: () {
                 if (!_formKey.currentState!.validate()) return;
 
-                context.read<LoginBloc>().add(BloweFetch(params));
+                context.read<LoginBloc>().fetch(params);
               },
             ),
           ),
@@ -57,7 +57,7 @@ class _LoginFormState extends State<LoginForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<LoginBloc>().add(BloweFetch(params));
+              context.read<LoginBloc>().fetch(params);
             },
             text: AppLocalizations.of(context)!.login,
           ),

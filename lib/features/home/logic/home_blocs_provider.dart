@@ -18,7 +18,7 @@ class HomeBlocsProvider extends StatelessWidget {
         BlocProvider(
           create: (context) => FlugramsBloc(
             context.read<FlugramsRepository>(),
-          )..add(const BloweFetch(BloweNoParams())),
+          )..fetch(const BloweNoParams()),
         ),
       ],
       child: child,

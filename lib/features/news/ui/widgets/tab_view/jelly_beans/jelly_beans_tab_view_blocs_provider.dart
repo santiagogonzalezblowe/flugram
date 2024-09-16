@@ -19,7 +19,7 @@ class JellyBeansTabViewBlocsProvider extends StatelessWidget {
         BlocProvider(
           create: (context) => JellyBeansBloc(
             context.read<JellyBeanRepository>(),
-          )..add(const BloweFetch(BloweNoParams())),
+          )..fetch(const BloweNoParams()),
         ),
         BlocProvider(
           create: (context) => JellyBeanSearchBloc(

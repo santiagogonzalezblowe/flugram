@@ -22,7 +22,7 @@ class SubpagesBlocsProvider extends StatelessWidget {
         context.read<SubpagesRepository>(),
         flugramId,
         parentPageIds,
-      )..add(const BloweFetch(BloweNoParams())),
+      )..fetch(const BloweNoParams()),
       child: child,
     );
   }

@@ -27,9 +27,7 @@ class SocialMediaAuthentication extends StatelessWidget {
         // const SizedBox(width: 16),
         SvgIconButton(
           onPressed: () {
-            context.read<SocialLoginBloc>().add(
-                  const BloweFetch(SocialMediaType.google),
-                );
+            context.read<SocialLoginBloc>().fetch(SocialMediaType.google);
           },
           height: 32,
           path: Assets.iconsGoogle,

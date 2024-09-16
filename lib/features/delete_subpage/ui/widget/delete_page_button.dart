@@ -9,8 +9,8 @@ class DeleteSubpageButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BloweBlocButton<DeleteSubpageBloc, ElevatedButton, void>(
-      onPressed: () => context.read<DeleteSubpageBloc>().add(
-            const BloweFetch(BloweNoParams()),
+      onPressed: () => context.read<DeleteSubpageBloc>().fetch(
+            const BloweNoParams(),
           ),
       text: AppLocalizations.of(context)!.delete,
     );

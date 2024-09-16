@@ -48,7 +48,7 @@ class _CreateFlugramFormState extends State<CreateFlugramForm> {
               onEditingComplete: () {
                 if (!_formKey.currentState!.validate()) return;
 
-                context.read<CreateFlugramBloc>().add(BloweFetch(params));
+                context.read<CreateFlugramBloc>().fetch(params);
               },
             ),
           ),
@@ -57,7 +57,7 @@ class _CreateFlugramFormState extends State<CreateFlugramForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<CreateFlugramBloc>().add(BloweFetch(params));
+              context.read<CreateFlugramBloc>().fetch(params);
             },
             text: AppLocalizations.of(context)!.send,
           ),

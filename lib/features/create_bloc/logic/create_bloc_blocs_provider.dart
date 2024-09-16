@@ -29,7 +29,7 @@ class CreateBlocBlocsProvider extends StatelessWidget {
           create: (context) => RepositoriesLoadBloc(
             context.read<RepositoriesRepository>(),
             flugramId,
-          )..add(const BloweFetch(BloweNoParams())),
+          )..fetch(const BloweNoParams()),
         ),
       ],
       child: child,

@@ -20,7 +20,7 @@ class JellyBeanBlocsProvider extends StatelessWidget {
         BlocProvider(
           create: (context) => JellyBeanBloc(
             context.read<JellyBeanRepository>(),
-          )..add(BloweFetch(beanId)),
+          )..fetch(beanId),
         ),
       ],
       child: child,

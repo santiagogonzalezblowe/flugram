@@ -68,9 +68,7 @@ class _UpdatePageFormState extends State<UpdatePageForm> {
               onEditingComplete: () {
                 if (!_formKey.currentState!.validate()) return;
 
-                context.read<UpdatePageBloc>().add(
-                      BloweFetch(updatePageParams),
-                    );
+                context.read<UpdatePageBloc>().fetch(updatePageParams);
               },
             ),
           ),
@@ -79,9 +77,7 @@ class _UpdatePageFormState extends State<UpdatePageForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<UpdatePageBloc>().add(
-                    BloweFetch(updatePageParams),
-                  );
+              context.read<UpdatePageBloc>().fetch(updatePageParams);
             },
             text: AppLocalizations.of(context)!.save,
           ),

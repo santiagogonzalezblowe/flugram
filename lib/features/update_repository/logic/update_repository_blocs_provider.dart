@@ -25,7 +25,7 @@ class UpdateRepositoryBlocsProvider extends StatelessWidget {
             flugramId,
             repositoryId,
             context.read<RepositoryRepository>(),
-          )..add(const BloweFetch(BloweNoParams())),
+          )..fetch(const BloweNoParams()),
         ),
         BlocProvider(
           create: (context) => UpdateRepositoryBloc(

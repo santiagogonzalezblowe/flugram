@@ -24,19 +24,19 @@ class FlugramBlocsProvider extends StatelessWidget {
         BlocProvider(
           create: (context) => FlugramWatchBloc(
             context.read<FlugramRepository>(),
-          )..add(BloweFetch(flugramId)),
+          )..fetch(flugramId),
         ),
         BlocProvider(
           create: (context) => PagesBloc(
             context.read<PagesRepository>(),
             flugramId,
-          )..add(const BloweFetch(BloweNoParams())),
+          )..fetch(const BloweNoParams()),
         ),
         BlocProvider(
           create: (context) => RepositoriesWatchBloc(
             context.read<RepositoriesRepository>(),
             flugramId,
-          )..add(const BloweFetch(BloweNoParams())),
+          )..fetch(const BloweNoParams()),
         ),
       ],
       child: child,

@@ -31,7 +31,7 @@ class UpdateBlocBlocsProvider extends StatelessWidget {
             parentPageIds,
             context.read<BlocRepository>(),
             context.read<RepositoriesRepository>(),
-          )..add(const BloweFetch(BloweNoParams())),
+          )..fetch(const BloweNoParams()),
         ),
         BlocProvider(
           create: (context) => UpdateBlocBloc(
@@ -44,7 +44,7 @@ class UpdateBlocBlocsProvider extends StatelessWidget {
           create: (context) => RepositoriesLoadBloc(
             context.read<RepositoriesRepository>(),
             flugramId,
-          )..add(const BloweFetch(BloweNoParams())),
+          )..fetch(const BloweNoParams()),
         ),
       ],
       child: child,

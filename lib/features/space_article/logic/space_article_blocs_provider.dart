@@ -20,7 +20,7 @@ class SpaceArticleBlocsProvider extends StatelessWidget {
         BlocProvider(
           create: (context) => SpaceArticleBloc(
             context.read<SpaceRepository>(),
-          )..add(BloweFetch(articleId)),
+          )..fetch(articleId),
         ),
       ],
       child: child,

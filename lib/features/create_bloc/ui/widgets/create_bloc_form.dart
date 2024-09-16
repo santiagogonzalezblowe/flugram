@@ -78,7 +78,7 @@ class _CreateBlocFormState extends State<CreateBlocForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<CreateBlocBloc>().add(BloweFetch(params));
+              context.read<CreateBlocBloc>().fetch(params);
             },
             text: AppLocalizations.of(context)!.send,
           ),

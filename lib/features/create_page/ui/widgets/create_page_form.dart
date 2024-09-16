@@ -59,7 +59,7 @@ class _CreatePageFormState extends State<CreatePageForm> {
               onEditingComplete: () {
                 if (!_formKey.currentState!.validate()) return;
 
-                context.read<CreatePageBloc>().add(BloweFetch(params));
+                context.read<CreatePageBloc>().fetch(params);
               },
             ),
           ),
@@ -68,7 +68,7 @@ class _CreatePageFormState extends State<CreatePageForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<CreatePageBloc>().add(BloweFetch(params));
+              context.read<CreatePageBloc>().fetch(params);
             },
             text: AppLocalizations.of(context)!.send,
           ),

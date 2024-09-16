@@ -37,10 +37,8 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
               onEditingComplete: () {
                 if (!_formKey.currentState!.validate()) return;
 
-                context.read<ForgotPasswordBloc>().add(
-                      BloweFetch(
-                        ForgotPasswordParams(_emailController.text),
-                      ),
+                context.read<ForgotPasswordBloc>().fetch(
+                      ForgotPasswordParams(_emailController.text),
                     );
               },
             ),
@@ -50,10 +48,8 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<ForgotPasswordBloc>().add(
-                    BloweFetch(
-                      ForgotPasswordParams(_emailController.text),
-                    ),
+              context.read<ForgotPasswordBloc>().fetch(
+                    ForgotPasswordParams(_emailController.text),
                   );
             },
             text: AppLocalizations.of(context)!.send,

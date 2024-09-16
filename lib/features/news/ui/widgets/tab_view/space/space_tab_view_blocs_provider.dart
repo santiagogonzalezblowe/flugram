@@ -18,7 +18,7 @@ class SpaceTabViewBlocsProvider extends StatelessWidget {
         BlocProvider(
           create: (context) => SpaceArticlesBloc(
             context.read<SpaceRepository>(),
-          )..add(const BloweFetch(BloweNoParams())),
+          )..fetch(const BloweNoParams()),
         ),
       ],
       child: child,

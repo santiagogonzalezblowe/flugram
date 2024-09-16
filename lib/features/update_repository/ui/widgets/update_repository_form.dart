@@ -58,8 +58,8 @@ class _UpdateRepositoryFormState extends State<UpdateRepositoryForm> {
               onEditingComplete: () {
                 if (!_formKey.currentState!.validate()) return;
 
-                context.read<UpdateRepositoryBloc>().add(
-                      BloweFetch(updateRepositoryParams),
+                context.read<UpdateRepositoryBloc>().fetch(
+                      updateRepositoryParams,
                     );
               },
             ),
@@ -69,8 +69,8 @@ class _UpdateRepositoryFormState extends State<UpdateRepositoryForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<UpdateRepositoryBloc>().add(
-                    BloweFetch(updateRepositoryParams),
+              context.read<UpdateRepositoryBloc>().fetch(
+                    updateRepositoryParams,
                   );
             },
             text: AppLocalizations.of(context)!.save,

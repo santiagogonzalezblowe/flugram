@@ -64,7 +64,7 @@ class _CreateSubpageFormState extends State<CreateSubpageForm> {
               onEditingComplete: () {
                 if (!_formKey.currentState!.validate()) return;
 
-                context.read<CreateSubpageBloc>().add(BloweFetch(params));
+                context.read<CreateSubpageBloc>().fetch(params);
               },
             ),
           ),
@@ -73,7 +73,7 @@ class _CreateSubpageFormState extends State<CreateSubpageForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<CreateSubpageBloc>().add(BloweFetch(params));
+              context.read<CreateSubpageBloc>().fetch(params);
             },
             text: AppLocalizations.of(context)!.send,
           ),

@@ -25,7 +25,7 @@ class UpdatePageBlocsProvider extends StatelessWidget {
             flugramId,
             pageId,
             context.read<PageRepository>(),
-          )..add(const BloweFetch(BloweNoParams())),
+          )..fetch(const BloweNoParams()),
         ),
         BlocProvider(
           create: (context) => UpdatePageBloc(

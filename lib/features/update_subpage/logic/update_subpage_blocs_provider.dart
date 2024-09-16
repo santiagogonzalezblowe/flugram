@@ -28,7 +28,7 @@ class UpdateSubpageBlocsProvider extends StatelessWidget {
             pageId,
             parentPageIds,
             context.read<SubpageRepository>(),
-          )..add(const BloweFetch(BloweNoParams())),
+          )..fetch(const BloweNoParams()),
         ),
         BlocProvider(
           create: (context) => UpdateSubpageBloc(

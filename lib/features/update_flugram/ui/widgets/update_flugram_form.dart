@@ -56,7 +56,7 @@ class _UpdateFlugramFormState extends State<UpdateFlugramForm> {
               onEditingComplete: () {
                 if (!_formKey.currentState!.validate()) return;
 
-                context.read<UpdateFlugramBloc>().add(BloweFetch(params));
+                context.read<UpdateFlugramBloc>().fetch(params);
               },
             ),
           ),
@@ -65,7 +65,7 @@ class _UpdateFlugramFormState extends State<UpdateFlugramForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<UpdateFlugramBloc>().add(BloweFetch(params));
+              context.read<UpdateFlugramBloc>().fetch(params);
             },
             text: AppLocalizations.of(context)!.save,
           ),

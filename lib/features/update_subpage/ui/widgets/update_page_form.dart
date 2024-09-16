@@ -71,9 +71,7 @@ class _UpdateSubpageFormState extends State<UpdateSubpageForm> {
               onEditingComplete: () {
                 if (!_formKey.currentState!.validate()) return;
 
-                context.read<UpdateSubpageBloc>().add(
-                      BloweFetch(updatePageParams),
-                    );
+                context.read<UpdateSubpageBloc>().fetch(updatePageParams);
               },
             ),
           ),
@@ -82,9 +80,7 @@ class _UpdateSubpageFormState extends State<UpdateSubpageForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<UpdateSubpageBloc>().add(
-                    BloweFetch(updatePageParams),
-                  );
+              context.read<UpdateSubpageBloc>().fetch(updatePageParams);
             },
             text: AppLocalizations.of(context)!.save,
           ),

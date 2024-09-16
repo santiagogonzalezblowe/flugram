@@ -48,7 +48,7 @@ class _CreateRepositoryFormState extends State<CreateRepositoryForm> {
               onEditingComplete: () {
                 if (!_formKey.currentState!.validate()) return;
 
-                context.read<CreateRepositoryBloc>().add(BloweFetch(params));
+                context.read<CreateRepositoryBloc>().fetch(params);
               },
             ),
           ),
@@ -57,7 +57,7 @@ class _CreateRepositoryFormState extends State<CreateRepositoryForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<CreateRepositoryBloc>().add(BloweFetch(params));
+              context.read<CreateRepositoryBloc>().fetch(params);
             },
             text: AppLocalizations.of(context)!.send,
           ),

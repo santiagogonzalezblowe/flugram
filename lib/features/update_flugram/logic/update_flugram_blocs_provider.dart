@@ -26,7 +26,7 @@ class UpdateFlugramBlocsProvider extends StatelessWidget {
         BlocProvider(
           create: (context) => FlugramLoadBloc(
             context.read<FlugramRepository>(),
-          )..add(BloweFetch(flugramId)),
+          )..fetch(flugramId),
         ),
       ],
       child: child,

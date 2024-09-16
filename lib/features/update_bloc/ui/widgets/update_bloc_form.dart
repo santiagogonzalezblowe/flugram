@@ -84,9 +84,7 @@ class _UpdateBlocFormState extends State<UpdateBlocForm> {
             onPressed: () {
               if (!_formKey.currentState!.validate()) return;
 
-              context.read<UpdateBlocBloc>().add(
-                    BloweFetch(updateBlocParams),
-                  );
+              context.read<UpdateBlocBloc>().fetch(updateBlocParams);
             },
             text: AppLocalizations.of(context)!.save,
           ),

@@ -24,11 +24,11 @@ dependencies:
   uuid: ^4.4.0
   http: ^1.2.1
   url_launcher: ^6.3.0
-  blowe_bloc: ^0.3.1
+  blowe_bloc: ^0.4.2
   # blowe_bloc:
   #   git:
   #     url: https://github.com/santiagogonzalezblowe/blowe_bloc.git
-  #     ref: add-bloc-property
+  #     ref: add-start-end-widgets-pagination-listview
 
 dev_dependencies:
   flutter_test:
